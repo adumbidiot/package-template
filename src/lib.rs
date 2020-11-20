@@ -11,7 +11,7 @@ use napi::{CallContext, Env, JsNumber, JsObject, Module, Result, Task};
 #[global_allocator]
 static ALLOC: jemallocator::Jemalloc = jemallocator::Jemalloc;
 
-#[cfg(all(windows, target_arch = "x86_64"))]
+#[cfg(windows)]
 #[global_allocator]
 static ALLOC: mimalloc::MiMalloc = mimalloc::MiMalloc;
 
